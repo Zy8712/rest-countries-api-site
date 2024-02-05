@@ -3,7 +3,7 @@ import countryData from '../../data.json';
 import { useSelector } from "react-redux";
 
 function RenderCards() {
-    const { searchValue, filterValue } = useSelector(state => state.displayValue);
+    const { searchValue, filterValue, darkMode } = useSelector(state => state.displayValue);
 
     const [location, setLocation] = useLocation();
 
@@ -32,7 +32,6 @@ function RenderCards() {
         }
     };
 
-
     const filteredCountries = countryData.filter(country => {
         const matchesFilter = filterValue === 1 || country.region === getRegionNameFromFilterValue(filterValue);
 
@@ -45,11 +44,11 @@ function RenderCards() {
         return filteredCountries.map((country, data) => (
             <>
                 <div onClick={() => handleCardClick(country.alpha3Code)} key={country.alpha3Code}
-                    className="w-64 h-[336px] rounded-md overflow-hidden shadow-lg group hover:scale-105 hover:cursor-pointer">
+                    className={`w-64 h-[336px] rounded-md overflow-hidden ${darkMode ? 'shadow-white shadow-2xl' : 'shadow-dark-gray-light-mode-input shadow-lg'} group hover:scale-110 hover:cursor-pointer`}>
                     <div className="w-full h-40 flex justify-center items-center overflow-hidden">
                         <img src={country.flags.svg} className="object-cover w-full h-full" />
                     </div>
-                    <div className="w-full h-44 px-6 pt-6 bg-white">
+                    <div className={`w-full h-44 px-6 pt-6 ${darkMode ? 'bg-dark-blue-dark-mode-elements' : 'bg-white'}`}>
                         <div className="w-full h-full">
                             <p className="font-extrabold mb-3">{country.name}</p>
                             <p className="text-sm mb-1">
@@ -67,7 +66,6 @@ function RenderCards() {
             </>
         ));
     }
-
 
     return (
         <>

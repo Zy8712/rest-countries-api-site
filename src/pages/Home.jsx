@@ -8,12 +8,12 @@ function Home() {
 
     return (
         <>
-            <div className={`w-full flex flex-col pt-32 pb-12 px-24 ${darkMode ? 'bg-very-dark-blue-dark-mode-background' : 'bg-very-light-gray-light-mode-background'} text-very-dark-blue-light-mode-text`}>
+            <div className={`w-full h-auto flex flex-col pt-32 pb-20 px-4 sm:px-10 lg:px-24 ${darkMode ? 'bg-very-dark-blue-dark-mode-background text-white' : 'bg-very-light-gray-light-mode-background text-very-dark-blue-light-mode-text'}`}>
                 <FilterAndSearchBar />
                 <RenderCards />
             </div>
         </>
     );
-}
+};
 
 export default Home;

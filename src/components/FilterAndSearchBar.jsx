@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import DownArrow from '../assets/arrow-down-339-svgrepo-com.svg';
+import DownArrowWhite from '../assets/arrow-down-339-white-svgrepo-com.svg';
 import MagnifyGlass from '../assets/search-svgrepo-com.svg';
+import MagnifyGlassWhite from '../assets/search-white-svgrepo-com.svg';
 import XMark from '../assets/cross-svgrepo-com.svg';
+import XMarkWhite from '../assets/cross-white-svgrepo-com.svg';
 import { useDispatch, useSelector } from "react-redux";
 import { alterFilterValue, alterSearchValue } from '../redux/settings';
 
@@ -10,7 +13,7 @@ function FilterAndSearchBar() {
     const filterOptions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania", "Polar"];
 
     const dispatch = useDispatch();
-    const { searchValue, filterValue } = useSelector(state => state.displayValue);
+    const { searchValue, filterValue, darkMode } = useSelector(state => state.displayValue);
 
     const setSearchQuery = (value) => {
         dispatch(alterSearchValue(value));
@@ -24,31 +27,34 @@ function FilterAndSearchBar() {
 
     return (
         <>
-            <div className="w-full flex justify-between mb-12">
-                <div className="w-[440px] h-14 relative flex justify-between items-center bg-white rounded-md shadow-md">
-                    <img src={MagnifyGlass} className="absolute left-6 w-5" />
+            <div className={`w-full flex flex-col custom-md:flex-row justify-start custom-md:justify-between items-center custom-md:items-start mb-12 ${darkMode ? 'text-white' : 'text-very-dark-blue-light-mode-text'} `}>
+                <div className={`w-[98%] sm:w-[440px] h-14 relative flex justify-between items-center mb-5 custom-md:mb-0 ${darkMode ? 'bg-dark-blue-dark-mode-elements shadow-white' : 'bg-white shadow-dark-blue-dark-mode-elements'} rounded-md overflow-hidden shadow-2xl`}>
+                    <img src={MagnifyGlass} className={`${darkMode ? 'hidden' : 'inline'} absolute left-6 w-5`} />
+                    <img src={MagnifyGlassWhite} className={`${darkMode ? 'inline' : 'hidden'} absolute left-6 w-5`} />
                     <input type="text"
                         placeholder="Search for a country..."
-                        className="w-full h-full pl-14"
+                        className="w-full h-full pl-14 bg-transparent outline-none"
                         value={searchValue}
                         onChange={(e) => setSearchQuery(e.target.value)} />
                     <button onClick={() => dispatch(alterSearchValue(''))}
                         className={`absolute right-6 ${searchValue != "" ? 'inline' : 'hidden'}`}>
-                        <img src={XMark} className="w-8" />
+                        <img src={XMark} className={`${darkMode ? 'hidden' : 'inline'} w-8`} />
+                        <img src={XMarkWhite} className={`${darkMode ? 'inline' : 'hidden'} w-8`} />
                     </button>
                 </div>
 
-                <div className="w-48 h-14 relative border-2 bg-white rounded-md shadow-md">
+                <div className={`w-48 h-14 relative ml-36 custom-md:mr-0 ${darkMode ? 'bg-dark-blue-dark-mode-elements shadow-white' : 'bg-white shadow-dark-blue-dark-mode-elements'} rounded-md shadow-2xl`}>
                     <button
                         onClick={toggleFilterOptions}
                         className="w-full h-full flex justify-between items-center px-5 focus:outline-none"
                     >
-                        <span className="text-sm">Filter by Region</span>
-                        <img src={DownArrow} className={`w-3 transition-transform transform ${showFilters ? 'rotate-180' : ''}`} alt="Down Arrow" />
+                        <span className="text-sm font-semibold">Filter by Region</span>
+                        <img src={DownArrow} className={`w-3 transition-transform transform ${darkMode ? 'hidden' : 'inline'} ${showFilters ? 'rotate-180' : ''}`} alt="Down Arrow" />
+                        <img src={DownArrowWhite} className={`w-3 transition-transform transform ${darkMode ? 'inline' : 'hidden'} ${showFilters ? 'rotate-180' : ''}`} alt="Down Arrow" />
                     </button>
-                    <p className="w-40 flex justify-end absolute text-sm top-1/2 -translate-y-1/2 right-56">Current Filter: {filterOptions[filterValue - 1]}</p>
+                    <p className="w-40 flex justify-end absolute text-sm font-semibold top-1/2 -translate-y-1/2 right-56">Current Filter: {filterOptions[filterValue - 1]}</p>
                     <div
-                        className={`w-full h-56 absolute top-16 z-50 text-sm px-5 py-5 ${showFilters ? 'flex' : 'hidden'} flex-col justify-between items-start bg-white rounded-md shadow-md`}
+                        className={`w-full h-56 absolute top-16 z-50 text-sm px-5 py-5 ${showFilters ? 'flex' : 'hidden'} flex-col justify-between items-start ${darkMode ? 'bg-dark-blue-dark-mode-elements' : 'bg-white'} rounded-md shadow-md`}
                     >
                         <button onClick={() => dispatch(alterFilterValue(1))}
                             className="w-full text-left pl-1">All</button>
