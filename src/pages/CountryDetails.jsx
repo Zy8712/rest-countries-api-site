@@ -24,7 +24,7 @@ function CountryDetails() {
 
     return (
         <>
-            <div className={`w-full min-h-screen flex flex-col px-8 custom-lg:px-24 pt-32 ${darkMode ? 'bg-very-dark-blue-dark-mode-background text-white' : 'bg-very-light-gray-light-mode-background text-very-dark-blue-light-mode-text'}`}>
+            <div className={`w-full min-h-screen flex flex-col px-8 custom-lg:px-24 pt-32 ${darkMode ? 'bg-very-dark-blue-dark-mode-background text-white' : 'bg-very-light-gray-light-mode-background text-very-dark-blue-light-mode-text transition-all duration-500 ease-in-out'}`}>
                 <div className="w-full mb-14">
                     <Link href="/">
                         <button className={`w-32 h-10 ${darkMode ? 'bg-dark-blue-dark-mode-elements shadow-white' : 'bg-white shadow-dark-gray-light-mode-input'} rounded-md shadow-2xl`}>
