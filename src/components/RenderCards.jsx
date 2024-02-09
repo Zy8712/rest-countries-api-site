@@ -2,6 +2,7 @@ import { useLocation } from 'wouter';
 import { useEffect, useState } from 'react'; // Import useEffect and useState
 import countryData from '../../data.json';
 import { useSelector } from "react-redux";
+import { setPaginationSettings } from '../redux/settings';
 
 function RenderCards() {
     const { searchValue, filterValue, darkMode } = useSelector(state => state.displayValue);

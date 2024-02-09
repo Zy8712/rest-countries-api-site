@@ -28,7 +28,7 @@ function FilterAndSearchBar() {
     return (
         <>
             <div className={`w-full flex flex-col custom-md:flex-row justify-start custom-md:justify-between items-center custom-md:items-start mb-12 ${darkMode ? 'text-white' : 'text-very-dark-blue-light-mode-text'} `}>
-                <div className={`w-[98%] sm:w-[440px] h-14 relative flex justify-between items-center mb-5 custom-md:mb-0 ${darkMode ? 'bg-dark-blue-dark-mode-elements shadow-white' : 'bg-white shadow-dark-blue-dark-mode-elements'} rounded-md overflow-hidden shadow-2xl`}>
+                <div className={`w-[98%] sm:w-[440px] h-14 relative flex justify-between items-center mb-5 custom-md:mb-0 ${darkMode ? 'bg-dark-blue-dark-mode-elements shadow-white' : 'bg-white shadow-dark-blue-dark-mode-elements'} rounded-md overflow-hidden shadow-2xl transition-all duration-500 ease-in-out`}>
                     <img src={MagnifyGlass} className={`${darkMode ? 'hidden' : 'inline'} absolute left-6 w-5`} />
                     <img src={MagnifyGlassWhite} className={`${darkMode ? 'inline' : 'hidden'} absolute left-6 w-5`} />
                     <input type="text"
@@ -43,7 +43,7 @@ function FilterAndSearchBar() {
                     </button>
                 </div>
 
-                <div className={`w-48 h-14 relative ml-36 custom-md:mr-0 ${darkMode ? 'bg-dark-blue-dark-mode-elements shadow-white' : 'bg-white shadow-dark-blue-dark-mode-elements'} rounded-md shadow-2xl`}>
+                <div className={`w-48 h-14 relative ml-36 custom-md:mr-0 ${darkMode ? 'bg-dark-blue-dark-mode-elements shadow-white' : 'bg-white shadow-dark-blue-dark-mode-elements'} rounded-md shadow-2xl transition-all duration-500 ease-in-out`}>
                     <button
                         onClick={toggleFilterOptions}
                         className="w-full h-full flex justify-between items-center px-5 focus:outline-none"
