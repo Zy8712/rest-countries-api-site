@@ -109,7 +109,7 @@ function CountryDetails() {
             </div>
 
             <div className={`w-screen h-full ${fullFlagDisplay ? 'flex' : 'hidden'} justify-center items-start sm:items-center absolute z-50 top-0 bg-custom-translucent-black`}>
-                <img src={selectedCountry.flags.svg} className="w-[95%] sm:w-[620px] md:w-[640px] custom-md:w-[768px] lg:w-[900px] xl:w-[1024px] mt-40 sm:mt-0 transition-all duration-500 ease-in-out" />
+                <img src={selectedCountry.flags.svg} className="w-[95%] sm:w-[620px] md:w-[640px] custom-md:w-[768px] lg:w-[900px] xl:w-[1024px] max-h-[80%] mt-40 sm:mt-0 transition-all duration-500 ease-in-out" />
                 <button onClick={toggleFullFlag}
                     className={`w-12 h-12 flex justify-center items-center absolute top-5 right-5 ${darkMode ? 'border-white' : 'border-black'} border-2 border-solid rounded-full`}>
                     <img src={XMarkWhite} className={`${darkMode ? 'inline' : 'hidden'}`} />
