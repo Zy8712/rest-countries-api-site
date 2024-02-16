@@ -32,9 +32,9 @@ const JumpToTopButton = () => {
   };
 
   return (
-    <div className={isVisible ? 'scroll-to-top-btn show' : 'scroll-to-top-btn'} onClick={scrollToTop}>
-      <img src={Arrow_Icon} className="w-7 h-7 pointer-events-none select-none" />
-    </div>
+    <button className={isVisible ? 'scroll-to-top-btn show' : 'scroll-to-top-btn'} onClick={scrollToTop}>
+      <img src={Arrow_Icon} alt="up button" className="w-7 h-7 pointer-events-none select-none" />
+    </button>
   );
 };
 

@@ -45,6 +45,7 @@ function CountryDetails() {
                 </div>
 
                 <div className="w-full flex flex-col xl:flex-row justify-between items-center xl:items-start mb-32">
+                    
                     <div className="w-[98%] sm:w-[580px] h-auto sm:h-[400px] relative">
                         <img src={selectedCountry.flags.svg} className="object-cover w-full h-full" />
                         <button onClick={toggleFullFlag}

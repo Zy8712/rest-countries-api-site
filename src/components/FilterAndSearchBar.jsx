@@ -29,8 +29,8 @@ function FilterAndSearchBar() {
         <>
             <div className={`w-full flex flex-col custom-md:flex-row justify-start custom-md:justify-between items-center custom-md:items-start mb-12 ${darkMode ? 'text-white' : 'text-very-dark-blue-light-mode-text'} `}>
                 <div className={`w-[98%] sm:w-[440px] h-14 relative flex justify-between items-center mb-5 custom-md:mb-0 ${darkMode ? 'bg-dark-blue-dark-mode-elements shadow-white' : 'bg-white shadow-dark-blue-dark-mode-elements'} rounded-md overflow-hidden shadow-2xl transition-all duration-500 ease-in-out`}>
-                    <img src={MagnifyGlass} className={`${darkMode ? 'hidden' : 'inline'} absolute left-6 w-5`} />
-                    <img src={MagnifyGlassWhite} className={`${darkMode ? 'inline' : 'hidden'} absolute left-6 w-5`} />
+                    <img src={MagnifyGlass} alt="" className={`${darkMode ? 'hidden' : 'inline'} absolute left-6 w-5`} />
+                    <img src={MagnifyGlassWhite} alt="" className={`${darkMode ? 'inline' : 'hidden'} absolute left-6 w-5`} />
                     <input type="text"
                         placeholder="Search for a country..."
                         className="w-full h-full pl-14 bg-transparent outline-none"
@@ -38,8 +38,8 @@ function FilterAndSearchBar() {
                         onChange={(e) => setSearchQuery(e.target.value)} />
                     <button onClick={() => dispatch(alterSearchValue(''))}
                         className={`absolute right-6 ${searchValue != "" ? 'inline' : 'hidden'}`}>
-                        <img src={XMark} className={`${darkMode ? 'hidden' : 'inline'} w-8`} />
-                        <img src={XMarkWhite} className={`${darkMode ? 'inline' : 'hidden'} w-8`} />
+                        <img src={XMark} alt="close button" className={`${darkMode ? 'hidden' : 'inline'} w-8`} />
+                        <img src={XMarkWhite} alt="close button" className={`${darkMode ? 'inline' : 'hidden'} w-8`} />
                     </button>
                 </div>
 
@@ -49,8 +49,8 @@ function FilterAndSearchBar() {
                         className="w-full h-full flex justify-between items-center px-5 focus:outline-none"
                     >
                         <span className="text-sm font-semibold">Filter by Region</span>
-                        <img src={DownArrow} className={`w-3 transition-transform transform ${darkMode ? 'hidden' : 'inline'} ${showFilters ? 'rotate-180' : ''}`} alt="Down Arrow" />
-                        <img src={DownArrowWhite} className={`w-3 transition-transform transform ${darkMode ? 'inline' : 'hidden'} ${showFilters ? 'rotate-180' : ''}`} alt="Down Arrow" />
+                        <img src={DownArrow} alt="" className={`w-3 transition-transform transform ${darkMode ? 'hidden' : 'inline'} ${showFilters ? 'rotate-180' : ''}`} />
+                        <img src={DownArrowWhite} alt="" className={`w-3 transition-transform transform ${darkMode ? 'inline' : 'hidden'} ${showFilters ? 'rotate-180' : ''}`} />
                     </button>
                     <p className="w-40 flex justify-end absolute text-sm font-semibold top-1/2 -translate-y-1/2 right-56">Current Filter: {filterOptions[filterValue - 1]}</p>
                     <div
