@@ -13,6 +13,8 @@ export default {
         'very-dark-blue-light-mode-text' : 'hsl(200, 15%, 8%)',
         'dark-gray-light-mode-input' : 'hsl(0, 0%, 52%)',
         'very-light-gray-light-mode-background' : 'hsl(0, 0%, 98%)',
+
+        'custom-translucent-black' : 'rgba(0, 0, 0, 0.6)',
       },
       screens: {
         'custom-md' : '900px',
