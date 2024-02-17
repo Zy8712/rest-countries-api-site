@@ -1,7 +1,9 @@
+<style>h1,h2,h3,h4 { border-bottom: 0; } </style>
+
 <div align="center">
     <img src="./public/world-map-svgrepo-com.svg" width="250px" />
     <h1>Rest Countries API With Color Theme Swticher</h1>
-    <img src="https://skillicons.dev/icons?i=html,css,js,vite,react,tailwind,redux,vercel&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=html,css,js,vite,react,tailwind,redux,vercel,vscode,svg&theme=dark" />
     <br />
     <br />
     <p>
@@ -22,10 +24,41 @@
         <img align="center" src="https://img.shields.io/badge/Autoprefixer-v10.4.17-DD3735?style=flat&logo=autoprefixer&logoColor=white" />
     </p>
 </div>
-<br>
+<br />
+<br />
 
 
-## Image Assets Used
+# Pagespeed Insights Score (as of February 16th, 2024):
+<div align="center">
+    <h2>Desktop Ver.</h2>
+    <br />
+    <img src="./src/assets/readme-only/pagespeed-insights-desktop.svg" />
+    <br />
+    <br />
+    <h2>Mobile Ver.</h2>
+    <br />
+    <img src="./src/assets/readme-only/pagespeed-insights-mobile.svg" />
+</div>
+<br />
+<p>
+Stats from <a href="https://pagespeed.web.dev/">Pagespeed Insights</a>. Graphics above generated using <a href="https://github.com/Correia-jpv/pagespeed-insights-to-svg">pagespeed-insights-to-svg</a>.
+</p>
+<details>
+    <summary>Pagespeed Insights Report History</summary>
+<br />
+
+| Date | Report Link | Desktop Score | Mobile Score |
+| :---: | :----: | :------: | :------: |
+| Feb 16, 2024 | <a href="https://pagespeed.web.dev/analysis/https-rest-countries-api-site-vercel-app/ykbzt764fu?form_factor=desktop">Link</a> | P-97, A-100, BP-100, S-100 | P-90, A-100, BP-100, S-100 |
+
+</details>
+<br />
+<br />
+<br />
+
+
+# Image Assets Used
+
 | Name | Image |  Source | Link to Source Ver. | File Name | Alterations to Base Ver. |
 | :----: | :----: | :---------: | :------------: | :--------------------------: | :----------------------------: |
 | Computer World Map Icon | <img src="./public/world-map-svgrepo-com.svg" width="80px" /> | SVG Repo | <a href="https://www.svgrepo.com/svg/261961/world-map">Link Here</a> | world-map-svgrepo-com.svg | None |
