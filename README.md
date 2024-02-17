@@ -1,5 +1,3 @@
-<style>h1,h2,h3,h4 { border-bottom: 0; } </style>
-
 <div align="center">
     <img src="./public/world-map-svgrepo-com.svg" width="250px" />
     <h1>Rest Countries API With Color Theme Swticher</h1>
