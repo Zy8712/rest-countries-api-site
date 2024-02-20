@@ -14,7 +14,7 @@ function RenderCards() {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth <= 768) {
-                setVisibleCardsCount(8); // Update visible cards count for smaller screens
+                setVisibleCardsCount(6); // Update visible cards count for smaller screens
             } else {
                 setVisibleCardsCount(16); // Default value for larger screens
             }
