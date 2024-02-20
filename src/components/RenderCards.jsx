@@ -9,22 +9,53 @@ function RenderCards() {
     const [location, setLocation] = useLocation();
     const [visibleCardsCount, setVisibleCardsCount] = useState(16); // State to track number of visible cards
 
+    // SCREEN RESIZE. CARD LOAD COUNT CHANGED.
+    // Alters the number of cards loaded upon site load and the number of cards loaded each time (via. infinite scrolling) we react the bottom of the page
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setVisibleCardsCount(8); // Update visible cards count for smaller screens
+            } else {
+                setVisibleCardsCount(16); // Default value for larger screens
+            }
+        };
+
+        // Initial call to set the correct visible cards count based on screen size
+        handleResize();
+
+        // Add event listener to update visible cards count when the window is resized
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup function to remove event listener when component unmounts
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []); // Empty dependency array ensures that this effect runs only once after initial render
+
+
+    // PAGE CHANGE TO COUNTRY DETAILS PAGE
     const handleCardClick = (alpha3Code) => {
         setLocation(`/${alpha3Code}`);
     };
 
+
+    // DROPDOWN REGION FILTER MENU OPTIONS.
     const regionNames = ['', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania', 'Polar'];
 
     const getRegionNameFromFilterValue = (filterValue) => {
         return regionNames[filterValue - 1];
     };
 
+
+    // SEARCHBAR STRING SEARCH.
     const filteredCountries = countryData.filter(country => {
         const matchesFilter = filterValue === 1 || country.region === getRegionNameFromFilterValue(filterValue);
         const matchesSearch = searchValue === '' || country.name.toLowerCase().includes(searchValue.toLowerCase());
         return matchesSearch && matchesFilter;
     });
 
+
+    // INFINITE SCROLLING CARD LOADING.
     useEffect(() => {
         const handleScroll = () => {
             const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
@@ -50,6 +81,8 @@ function RenderCards() {
         };
     }, []); // Run effect only once
 
+
+    // CARD RENDERING.
     const renderData = () => {
         return filteredCountries.slice(0, visibleCardsCount).map(country => (
             <div key={country.alpha3Code} onClick={() => handleCardClick(country.alpha3Code)}

@@ -25,7 +25,7 @@ function Navbar() {
                     <button onClick={() => dispatch(toggleDarkMode())}
                         className="font-semibold px-3 py-2">
                         <i className="las la-moon mr-2 text-xl"></i>
-                        Dark Mode
+                        <span className="hidden custom-xs:inline">Dark Mode</span>
                     </button>
                 </div>
             </div>

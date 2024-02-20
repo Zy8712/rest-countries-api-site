@@ -17,6 +17,7 @@ export default {
         'custom-translucent-black' : 'rgba(0, 0, 0, 0.6)',
       },
       screens: {
+        'custom-xs' : '390px',
         'custom-md' : '900px',
         'custom-lg' : '1380px',
       },
