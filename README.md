@@ -1,5 +1,3 @@
-<style>h1,h2,h3,h4 { border-bottom: 0; } </style>
-
 <div align="center">
     <img src="./public/world-map-svgrepo-com.svg" width="250px" />
     <h1>Rest Countries API With Color Theme Swticher</h1>
@@ -53,7 +51,7 @@ Stats from <a href="https://pagespeed.web.dev/">Pagespeed Insights</a>. Graphics
 | Feb 19, 2024 8:37:25 PM EST | <a href="https://pagespeed.web.dev/analysis/https-rest-countries-api-site-vercel-app/894sb7wphv?form_factor=desktop">Link</a> | P-99, A-100, BP-100, S-100 | P-88, A-100, BP-100, S-100 |
 | Feb 19, 2024 8:17:27 PM EST | <a href="https://pagespeed.web.dev/analysis/https-rest-countries-api-site-vercel-app/x4ol27ftab?form_factor=desktop">Link</a> | P-99, A-100, BP-100, S-100 | P-89, A-100, BP-100, S-100 |
 | Feb 16, 2024 6:52:17 PM EST | <a href="https://pagespeed.web.dev/analysis/https-rest-countries-api-site-vercel-app/ykbzt764fu?form_factor=desktop">Link</a> | P-97, A-100, BP-100, S-100 | P-90, A-100, BP-100, S-100 |
-
+Project by Bryan Li.
 </details>
 <br />
 <br />
